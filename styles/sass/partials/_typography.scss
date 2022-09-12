@@ -1,0 +1,94 @@
+@use "variables" as *;
+
+html{
+    // font size 20px basic
+    font-size: 125%;
+    font-family: $font;
+}
+
+body{
+    font-size: 1rem;
+    color: $white;
+    background-color: $black;
+}
+
+.homepage h1{
+    font-size: 3.45rem;
+    font-weight: 600;
+}
+
+h2, .blog h1, .contact h1{
+    font-size: 2.25rem;
+    line-height: 99.8px;
+}
+
+.contact h1{
+    letter-spacing: 5px;
+    padding-left: 20px;
+}
+
+.blog h1{
+    padding-left: 20px;
+}
+h1, h2, main a, .blogMain h3{
+    text-transform: uppercase;
+}
+
+h2, p, .buttonFirst, .buttonSecond, .blog h1, .blogMain h3, h5{
+    font-weight: 400;
+}
+
+h5{
+    font-size: 1.05rem;
+    font-family: $fontBodyP;
+}
+
+h4{
+    font-size: 2.25rem;
+    line-height: 58px;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+}
+
+p{
+    font-family: $fontBodyP;
+    letter-spacing: 1px;
+    line-height: 28px;
+}
+
+.yellowText{
+    text-align: center;
+    color: $yellow;
+}
+
+input[type=submit]{
+    font-family: $font;
+    line-height: 35px;
+}
+
+.wrapper nav{
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 29px;
+}
+.sameFormat h2, .blogMain h3{
+    font-size: 2rem;
+    line-height: 58px;
+    letter-spacing: 1.3px;
+}
+
+ul, li, a, h2, p, h3, h4, h5{
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    color: $white;
+}

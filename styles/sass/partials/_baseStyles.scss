@@ -1,0 +1,29 @@
+@use "variables" as *;
+
+.wrapper{
+max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+}
+.wrapper2{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+a{
+    &.buttonFirst{
+        background-color: $yellow;
+        padding: 10px 10px;
+        color: $black;
+    }
+    &.buttonSecond{
+        background-color: $black;
+        padding: 10px 10px;
+        display: inline-block;
+    }
+}

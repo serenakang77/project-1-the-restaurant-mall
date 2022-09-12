@@ -1,0 +1,12 @@
+@mixin background($sizeValue){
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: $sizeValue;
+}
+
+@mixin flexjustifyAlign($type: normal, $value: normal){
+    display: flex;
+    justify-content: $type;
+    align-items: $value;
+}
