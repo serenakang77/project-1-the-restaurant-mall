@@ -341,13 +341,20 @@ a {
 
 a.buttonFirst {
   background-color: #FFD300;
-  padding: 10px 10px;
+  padding: 12px 10px 10px 10px;
   color: #0F0F0F;
+}
+a.buttonFirst:hover {
+  color: #FFFFFF;
+  background-color: #FFD300;
 }
 a.buttonSecond {
   background-color: #0F0F0F;
-  padding: 10px 10px;
+  padding: 15px 10px 10px 10px;
   display: inline-block;
+}
+a.buttonSecond:hover {
+  background-color: #FFD300;
 }
 
 header {
@@ -399,8 +406,8 @@ header .headerImg {
           align-items: normal;
 }
 header .headerImg img {
-  max-width: 30%;
-  margin-top: -180px;
+  max-width: 700px;
+  margin-top: -200px;
 }
 header.homepage {
   background-image: url(../the-restaurant-mall-assets/the-restaurant-mall-assets/home-header.jpg);
@@ -418,7 +425,7 @@ main {
 }
 
 .homeMain .section1 {
-  padding: 37vh 0 5% 0;
+  padding: 37vh 0 100px 0;
 }
 .homeMain .section1 ul {
   display: -webkit-box;
@@ -510,18 +517,18 @@ main {
           box-shadow: 15px 15px #FFD300;
 }
 .homeMain .section2 .contentSize {
-  padding: 0 10% 0 20%;
+  padding: 30px 10% 0 20%;
   margin: 0 auto;
 }
 .homeMain .section2 a {
   display: inline-block;
-  margin: 50px 0 35px 0;
+  margin: 40px 0 35px 0;
 }
 .homeMain .section2 .section2ContentRight {
   text-align: end;
 }
 .homeMain .section2 .section2ContentRight .contentSize {
-  padding: 0 20% 0 10%;
+  padding: 30px 20% 0 10%;
 }
 
 .section2part1, .section2part2 {
@@ -536,7 +543,7 @@ main {
   background-color: #2B331B;
 }
 .homeMain .section3 .section3Content {
-  padding: 100px 0 60px 0;
+  padding: 50px 0 30px 0;
   text-align: center;
 }
 .homeMain .section3 .section3Content p {
@@ -737,6 +744,10 @@ main {
   color: #0F0F0F;
   width: 100%;
   text-transform: uppercase;
+  cursor: pointer;
+}
+.section1ContactForm input[type=submit]:hover, .contactPage .contactForm input[type=submit]:hover {
+  color: #FFFFFF;
 }
 
 .contactPage {

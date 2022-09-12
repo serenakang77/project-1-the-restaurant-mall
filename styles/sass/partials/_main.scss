@@ -8,7 +8,7 @@ main{
 
 // Home Main starts
 .homeMain .section1{
-    padding: 37vh 0 5% 0;
+    padding: 37vh 0 100px 0;
     ul{
         @include flexjustifyAlign(space-between);
         flex-wrap: wrap;
@@ -69,17 +69,17 @@ main{
         }
     }
     .contentSize{
-        padding: 0 10% 0 20%;
+        padding: 30px 10% 0 20%;
         margin: 0 auto;
     }
     a{
         display: inline-block;
-        margin: 50px 0 35px 0;
+        margin: 40px 0 35px 0;
     }
     .section2ContentRight{
         text-align: end;
         .contentSize{
-            padding: 0 20% 0 10%;
+            padding: 30px 20% 0 10%;
         }
     }
 }
@@ -95,7 +95,7 @@ main{
 .homeMain .section3{
     background-color: $primaryColor;
     .section3Content{
-        padding: 100px 0 60px 0;
+        padding: 50px 0 30px 0;
         text-align: center;
         p{
             text-align: left;
@@ -269,6 +269,10 @@ main{
         color: $black;
         width: 100%;
         text-transform: uppercase;
+        cursor: pointer;
+        &:hover{
+            color: $white;
+        }
     }
 }
 // Blog Main & Contact Main Form combined ends
