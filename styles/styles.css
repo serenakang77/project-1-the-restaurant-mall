@@ -298,7 +298,7 @@ input[type=submit] {
   line-height: 29px;
 }
 
-.sameFormat h2, .blogMain h3 {
+.contentSize h2, .blogMain h3 {
   font-size: 2rem;
   line-height: 58px;
   letter-spacing: 1.3px;
@@ -363,6 +363,9 @@ header {
   background-position: center;
   height: 650px;
 }
+header button {
+  display: none;
+}
 header ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -407,7 +410,7 @@ header .headerImg {
 }
 header .headerImg img {
   max-width: 700px;
-  margin-top: -200px;
+  margin-top: -25vh;
 }
 header.homepage {
   background-image: url(../the-restaurant-mall-assets/the-restaurant-mall-assets/home-header.jpg);
@@ -425,7 +428,7 @@ main {
 }
 
 .homeMain .section1 {
-  padding: 37vh 0 100px 0;
+  padding: 20vh 0 100px 0;
 }
 .homeMain .section1 ul {
   display: -webkit-box;
@@ -800,6 +803,108 @@ main {
   background-color: #171B0E;
 }
 
+@media (max-width: 1270px) {
+  header.homepage {
+    background-position-x: 22%;
+  }
+  .homepage h1 {
+    font-size: clamp(2.5rem, 5.5vw, 3.45rem);
+  }
+  .homepage .headerImg img {
+    max-width: 550px;
+    margin-top: -8vh;
+  }
+  .homeMain h2 {
+    font-size: clamp(1rem, 3.5vw, 2.25rem);
+  }
+  .homeMain h2 .section2 a {
+    margin: 20px 0 30px 0;
+  }
+  .homeMain P {
+    font-size: clamp(0.7rem, 2.5vw, 1rem);
+  }
+  .homeMain .contentSize h2 {
+    font-size: clamp(1rem, 3vw, 2rem);
+  }
+}
+@media (max-width: 900px) {
+  .homepage {
+    height: 500px;
+  }
+  .homepage .wrapper nav {
+    position: relative;
+  }
+  .homepage button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: transparent;
+    border: none;
+  }
+  .homepage button i {
+    position: absolute;
+    right: 5%;
+    top: 7%;
+  }
+  .homepage ul {
+    display: none;
+  }
+  .homepage .headerImg img {
+    margin-top: 2vh;
+    max-width: 450px;
+  }
+  .homeMain h2 {
+    font-size: clamp(1.5rem, 7vw, 2.25rem);
+  }
+  .homeMain p {
+    font-size: 1rem;
+  }
+  .homeMain .section1 ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .homeMain .section1 ul li {
+    width: 90%;
+    margin-top: 10%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .homeMain .section1 ul li .icon i {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+  .homeMain .section2 .whole2Section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .homeMain .section2 .contentSize {
+    padding: 0;
+  }
+  .homeMain .section2 .section2Img, .homeMain .section2 .section2Content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .homeMain .section3 {
+    padding: 5%;
+  }
+}
 footer p {
   text-align: center;
   padding: 10px 0;

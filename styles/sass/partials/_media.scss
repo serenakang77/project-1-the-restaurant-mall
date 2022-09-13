@@ -1,2 +1,109 @@
 @use "variables" as *;
 @use "function" as *;
+
+@media(max-width: 1270px){
+    header{
+    &.homepage{
+        background-position-x: 22%;
+        }
+    }
+    .homepage{
+        h1{
+            font-size: clamp(2.5rem, 5.5vw, 3.45rem);
+        }
+        .headerImg img{
+            max-width: 550px;
+            margin-top: -8vh;
+        }
+    }
+    .homeMain{
+        h2{
+            font-size: clamp(1rem, 3.5vw, 2.25rem);
+            .section2 a{
+                margin: 20px 0 30px 0;
+            }
+        }
+        P{
+            font-size: clamp(0.7rem, 2.5vw, 1rem);
+        }
+        .contentSize{
+            h2{
+                font-size: clamp(1rem, 3vw, 2rem)
+            }
+        }
+        
+    }
+     
+        
+    
+} 
+
+@media(max-width: 900px){
+    .homepage{
+        height: 500px;
+        .wrapper nav{
+            position: relative;
+        }
+        button{
+            display: flex;
+            justify-content: flex-end;
+            background-color:transparent;
+            border: none;
+            i{
+                position: absolute;
+                right: 5%;
+                top: 7%;
+            }
+        }
+        ul{
+            display: none;
+        }
+        .headerImg img{
+            margin-top: 2vh;
+            max-width: 450px;
+        }
+    }
+    .homeMain{
+        h2{
+            font-size: clamp(1.5rem, 7vw, 2.25rem);
+        }
+        p{
+            font-size: 1rem;
+        }
+        .section1{
+            ul{
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                li{
+                    width: 90%;
+                    margin-top: 10%;
+                    align-items: center;
+                    flex-direction: column;
+                    .icon{
+                        i{
+                            width: 80px;
+                            height: 80px;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+        .section2{
+            .whole2Section{
+                flex-direction: column;
+            }
+            .contentSize{
+                padding: 0;
+            }
+            .section2Img, .section2Content{
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+        .section3{
+            padding: 5%;
+        }
+    }
+}
