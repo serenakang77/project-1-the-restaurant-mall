@@ -17,14 +17,26 @@ body{
     font-weight: 600;
 }
 
-h2, .blog h1, .contact h1{
+h2, .blog h1{
     font-size: 2.25rem;
     line-height: 99.8px;
 }
 
+.blogMain h2{
+    font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+}
+
+.blogMain p, h5{
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+.contactPage p{
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
 .contact h1{
     letter-spacing: 5px;
     padding-left: 20px;
+    line-height: 99.8px;
+    font-size: clamp(1.5rem, 8vw, 2.25rem);
 }
 
 .blog h1{
@@ -44,10 +56,11 @@ h5{
 }
 
 h4{
-    font-size: 2.25rem;
+    font-size: clamp(0.9rem, 1.7vw, 1.25rem);
     line-height: 58px;
     letter-spacing: 0.8px;
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 p{
@@ -72,7 +85,7 @@ input[type=submit]{
     line-height: 29px;
 }
 .contentSize h2, .blogMain h3{
-    font-size: 2rem;
+    font-size: clamp(1rem, 6vw, 2rem);
     line-height: 58px;
     letter-spacing: 1.3px;
 }

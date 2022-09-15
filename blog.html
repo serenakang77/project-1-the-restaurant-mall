@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+    <script src="https://kit.fontawesome.com/8f523b1737.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <header class="blog">
-        <div class="wrapper">
+        <div class="menuBar">
+            <div class="buttonContainer">
+                <button class="closeButton"><i class="fa-solid fa-x fa-2x"></i></button>
+            </div>
             <nav>
                 <ul>
                     <li><a href="./index.html">Home</a></li>
@@ -18,6 +22,17 @@
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
+        </div>
+        <div class="wrapper">
+            <nav class="navBar">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menuBarButton"><i class="fa-solid fa-bars fa-2x"></i></button>
             <h1>Blog</h1>
         </div>
     </header>
@@ -29,20 +44,20 @@
                 </div>
                 <div class="leftBarContent">
                     <h4>Featured Restaurants</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, natus.</p>
+                    <p>Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum. Find out more.</p>
                     <h4 class="recentPost">Recent Posts</h4>
                     <ul>
                         <li>
-                            <p>Lorem, ipsum dolor.</p>
+                            <p>Donec facilisis tortor ut</p>
                         </li>
                         <li>
-                            <p>Lorem, ipsum dolor.</p>
+                            <p>Augue lacinia at viverra</p>
                         </li>
                         <li>
-                            <p>Lorem, ipsum dolor.</p>
+                            <p>Semper sed sapien metus</p>
                         </li>
                         <li>
-                            <p>Lorem, ipsum dolor.</p>
+                            <p>Scelerisque nec pharetra id</p>
                         </li>
                     </ul>
                 </div>
@@ -80,7 +95,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni amet officia tempora consequatur.</p>
                     </div>
                 </div>
-                <div class="section1ContactForm">
+                <div class="section2ContactForm">
                     <form>
                         <label for="fullName"></label>
                         <input type="text" id="fullName" name="fullName" placeholder="Name" required>
@@ -97,5 +112,7 @@
     <footer>
         <p>Copyright © 2019 Juno College</p>
     </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>

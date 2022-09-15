@@ -242,14 +242,28 @@ body {
   font-weight: 600;
 }
 
-h2, .blog h1, .contact h1 {
+h2, .blog h1 {
   font-size: 2.25rem;
   line-height: 99.8px;
+}
+
+.blogMain h2 {
+  font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+}
+
+.blogMain p, h5 {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.contactPage p {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 .contact h1 {
   letter-spacing: 5px;
   padding-left: 20px;
+  line-height: 99.8px;
+  font-size: clamp(1.5rem, 8vw, 2.25rem);
 }
 
 .blog h1 {
@@ -270,10 +284,11 @@ h5 {
 }
 
 h4 {
-  font-size: 2.25rem;
+  font-size: clamp(0.9rem, 1.7vw, 1.25rem);
   line-height: 58px;
   letter-spacing: 0.8px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 p {
@@ -299,7 +314,7 @@ input[type=submit] {
 }
 
 .contentSize h2, .blogMain h3 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 6vw, 2rem);
   line-height: 58px;
   letter-spacing: 1.3px;
 }
@@ -624,17 +639,17 @@ main {
 }
 
 .blogMain .section1 {
-  width: 33%;
+  width: 30%;
 }
 .blogMain .section1 .leftBar {
   background-color: #171B0E;
   margin-top: 100px;
-  margin-left: 50px;
+  margin-left: 10%;
   padding: 0 2%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  max-width: 450px;
+  max-width: 500px;
 }
 .blogMain .section1 .leftBar h4 {
   color: #FFD300;
@@ -652,16 +667,16 @@ main {
   padding-top: 3%;
 }
 .blogMain .section1 .leftBarImg {
-  margin-left: -5vw;
+  margin-left: -4vw;
 }
 .blogMain .section1 .leftBarImg img {
-  width: 100%;
+  width: 95%;
   max-width: 600px;
   margin-top: -20px;
 }
 
 .blogMain .section2 {
-  width: 67%;
+  width: 70%;
 }
 .blogMain .section2 .section2part1 {
   padding-left: 10%;
@@ -684,6 +699,9 @@ main {
 .blogMain .section2 .section2part1 .section2Content1 p {
   margin-bottom: 30px;
 }
+.blogMain .section2 .section2part1 .section2Content1 h5 {
+  padding-bottom: 30px;
+}
 .blogMain .section2 .section2part2 {
   padding: 5% 10% 5% 18%;
 }
@@ -701,7 +719,7 @@ main {
   padding: 30px 0 30px 0;
 }
 
-.section1ContactForm form, .contactPage .contactForm form {
+.section2ContactForm form, .contactPage .contactForm form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -715,23 +733,23 @@ main {
       flex-wrap: wrap;
   margin-top: 50px;
 }
-.section1ContactForm input[type=text], .section1ContactForm textarea, .contactPage .contactForm input[type=text], .contactPage .contactForm textarea {
+.section2ContactForm input[type=text], .section2ContactForm textarea, .contactPage .contactForm input[type=text], .contactPage .contactForm textarea {
   background-color: #2B331B;
   border: none;
   color: #FFFFFF;
   outline: none;
 }
-.section1ContactForm input[type=text], .contactPage .contactForm input[type=text] {
+.section2ContactForm input[type=text], .contactPage .contactForm input[type=text] {
   background-color: #2B331B;
   border: none;
   border-bottom: 2px solid #FFD300;
-  width: 45%;
+  width: 48%;
   padding: 0 0 15px 15px;
 }
-.section1ContactForm #fullName, .contactPage .contactForm #fullName {
-  margin-right: 10%;
+.section2ContactForm #fullName, .contactPage .contactForm #fullName {
+  margin-right: 4%;
 }
-.section1ContactForm textarea, .contactPage .contactForm textarea {
+.section2ContactForm textarea, .contactPage .contactForm textarea {
   margin-top: 20px;
   width: 100%;
   border: 2px solid #FFD300;
@@ -739,7 +757,7 @@ main {
   padding: 15px 0 0 10px;
   height: 200px;
 }
-.section1ContactForm input[type=submit], .contactPage .contactForm input[type=submit] {
+.section2ContactForm input[type=submit], .contactPage .contactForm input[type=submit] {
   margin-top: 20px;
   border-radius: 0;
   border: none;
@@ -749,7 +767,7 @@ main {
   text-transform: uppercase;
   cursor: pointer;
 }
-.section1ContactForm input[type=submit]:hover, .contactPage .contactForm input[type=submit]:hover {
+.section2ContactForm input[type=submit]:hover, .contactPage .contactForm input[type=submit]:hover {
   color: #FFFFFF;
 }
 
@@ -803,12 +821,16 @@ main {
   background-color: #171B0E;
 }
 
+header .menuBar {
+  display: none;
+}
+
 @media (max-width: 1270px) {
   header.homepage {
     background-position-x: 22%;
   }
   .homepage h1 {
-    font-size: clamp(2.5rem, 5.5vw, 3.45rem);
+    font-size: clamp(2.3rem, 5.5vw, 3.45rem);
   }
   .homepage .headerImg img {
     max-width: 550px;
@@ -824,43 +846,157 @@ main {
     font-size: clamp(0.7rem, 2.5vw, 1rem);
   }
   .homeMain .contentSize h2 {
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1rem, 6vw, 2rem);
   }
 }
-@media (max-width: 900px) {
-  .homepage {
+@media (max-width: 1150px) {
+  .blog {
     height: 500px;
   }
-  .homepage .wrapper nav {
-    position: relative;
+  .blogMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
-  .homepage button {
+  .blogMain .section1 {
+    width: 100%;
+    padding: 0;
+    background-color: #171B0E;
+  }
+  .blogMain .section1 .leftBar {
+    margin: 0 auto;
+    max-width: none;
+    padding: 0 5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .blogMain .section1 .leftBar img {
+    width: 100%;
+  }
+  .blogMain .section1 .leftBar .leftBarContent {
+    width: 55%;
+    padding-left: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blogMain .section1 .leftBar .leftBarContent .recentPost {
+    margin: 0;
+  }
+  .blogMain .section1 .leftBarImg {
+    width: 45%;
+    margin: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blogMain .section1 .leftBarImg img {
+    height: 100%;
+    margin: 0;
+  }
+  .blogMain .section2 {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .blogMain .section2 .section2part1 {
+    padding: 0;
+    text-align: center;
+  }
+  .blogMain .section2 .section2part1 .section2Content1 {
+    padding: 5%;
+  }
+  .blogMain .section2 .section2part1 img {
+    margin-top: 70px;
+  }
+  .blogMain .section2 .section2part2 {
+    padding: 5% 3%;
+  }
+  .blogMain .section2 .section2part2 h5 {
+    font-weight: 600;
+  }
+}
+@media (max-width: 900px) {
+  header.homepage {
+    background-position-x: center;
+    height: 500px;
+  }
+  header.homepage .menuBar {
+    width: 100%;
+    max-width: 600px;
+    display: none;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.92);
+    position: absolute;
+  }
+  header.homepage .menuBar nav {
+    width: 100%;
+  }
+  header.homepage .menuBar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 130px;
+  }
+  header.homepage .menuBar ul li {
+    padding-bottom: 3%;
+  }
+  header.homepage .menuBar ul a {
+    font-size: 1.5rem;
+  }
+  header.homepage button {
+    color: #FFD300;
+    display: inline-block;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
     background-color: transparent;
     border: none;
   }
-  .homepage button i {
+  header.homepage button i {
     position: absolute;
     right: 5%;
-    top: 7%;
+    top: 5%;
   }
-  .homepage ul {
-    display: none;
+  header.homepage .wrapper nav {
+    position: relative;
   }
-  .homepage .headerImg img {
+  header.homepage .headerImg img {
     margin-top: 2vh;
     max-width: 450px;
   }
+  header.homepage .menuBarButton {
+    cursor: pointer;
+  }
+  header.homepage .navBar ul {
+    display: none;
+  }
   .homeMain h2 {
-    font-size: clamp(1.5rem, 7vw, 2.25rem);
+    font-size: clamp(1rem, 5.2vw, 2.25rem);
   }
   .homeMain p {
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+  }
+  .homeMain .section1 {
+    padding: 15vh 0 80px 0;
   }
   .homeMain .section1 ul {
     -webkit-box-orient: vertical;
@@ -888,21 +1024,347 @@ main {
     height: 80px;
     font-size: 2rem;
   }
+  .homeMain .section2 a {
+    display: block;
+  }
   .homeMain .section2 .whole2Section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .homeMain .section2 .contentSize {
-    padding: 0;
+  .homeMain .section2 .section2ContentRight .contentSize {
+    padding: 50px 0 30px 0;
+    text-align: center;
+  }
+  .homeMain .section2 .burger img {
+    margin-top: 50px;
   }
   .homeMain .section2 .section2Img, .homeMain .section2 .section2Content {
     width: 90%;
     margin: 0 auto;
   }
+  .homeMain .section2 .section2ContentRight {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .homeMain .section2 .borderLeft {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .homeMain .section2 .contentSize {
+    padding: 50px 0 0 0;
+    text-align: center;
+  }
+  .homeMain .section2 .contentSize h2 {
+    padding-bottom: 10px;
+  }
   .homeMain .section3 {
     padding: 5%;
+  }
+  .homeMain .section3 .section3Content {
+    padding: 20px 0 30px 0;
+  }
+  .homeMain .section3 .section3Content p {
+    text-align: center;
+  }
+  .homeMain .section3 .section3Content a {
+    display: block;
+  }
+  .homeMain .section4 {
+    background-size: auto;
+    height: 500px;
+  }
+  .homeMain .section5 .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .homeMain .section5 a {
+    display: block;
+  }
+  .homeMain .section5 .section5ImgContainer, .homeMain .section5 .section5Content {
+    width: 90%;
+    padding: 0;
+    text-align: center;
+  }
+  .homeMain .section5 .section5ImgContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .homeMain .section5 .section5ImgContainer img {
+    border: 15px solid #FFD300;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    height: 80%;
+  }
+  .homeMain .section6 .galleryImage img {
+    width: calc(50% - 10px);
+  }
+  .homeMain .section6 .galleryImage img:nth-child(3) {
+    display: none;
+  }
+  header.contact {
+    height: 400px;
+  }
+  .contactPage {
+    padding-bottom: 0;
+  }
+  .contactPage .wrapper {
+    width: 100%;
+  }
+  .contactPage .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contactPage .contactForm {
+    width: 90%;
+    margin: 10% auto 0 auto;
+  }
+  .contactPage .contactInfo {
+    background-color: #171B0E;
+    width: 100%;
+    margin-top: 10%;
+    padding: 7% 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 3px solid #FFD300;
+  }
+  .contactPage .contactInfo .iconBox {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 35%;
+  }
+  .contactPage .contactInfo .iconBox a {
+    margin: 0;
+  }
+}
+@media (max-width: 600px) {
+  header.homepage h1 {
+    font-size: clamp(1.6rem, 8.5vw, 3rem);
+  }
+  header.homepage .headerImg img {
+    max-width: 400px;
+    margin-top: 2vh;
+  }
+  .homeMain h2 {
+    line-height: 78px;
+  }
+  .homeMain .section1 ul li {
+    margin-top: 5%;
+  }
+  .homeMain .section1 ul li .icon i {
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+  }
+  .blog .menuBar {
+    width: 100%;
+    max-width: 600px;
+    display: none;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.92);
+    position: absolute;
+  }
+  .blog .menuBar nav {
+    width: 100%;
+  }
+  .blog .menuBar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 130px;
+  }
+  .blog .menuBar ul li {
+    padding-bottom: 3%;
+  }
+  .blog .menuBar ul a {
+    font-size: 1.5rem;
+  }
+  .blog .wrapper {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .blog .wrapper .navBar ul {
+    display: none;
+  }
+  .blog .wrapper h1 {
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    font-size: clamp(2.25rem, 15vw, 5rem);
+  }
+  .blog button {
+    color: #FFD300;
+    display: inline-block;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: transparent;
+    border: none;
+  }
+  .blog button i {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+  }
+  .blogMain h2 {
+    line-height: 50px;
+    padding: 30px 0;
+  }
+  .blogMain .section2part2 {
+    text-align: center;
+  }
+  .blogMain .section2part2 .part2FirstContainer, .blogMain .section2part2 .part2SecondContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blogMain .section2part2 .part2FirstContainer h5, .blogMain .section2part2 .part2SecondContainer h5 {
+    padding: 20px 0;
+  }
+  .blogMain .section1 .leftBarImg {
+    width: 100%;
+  }
+  .blogMain .section1 .leftBar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blogMain .section1 .leftBar .leftBarContent {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .blogMain .section1 .leftBar .leftBarContent .recentPost {
+    padding: 30px 0 15px 0;
+  }
+  .blogMain .section1 .leftBar .leftBarContent h4 {
+    font-size: clamp(1.1rem, 1.7vw, 1.25rem);
+    line-height: 35px;
+    padding-bottom: 25px;
+  }
+  .blogMain .section1 .leftBar .leftBarContent ul {
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blogMain .section1 .leftBar .leftBarContent li {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .blogMain .section2 .section2ContactForm form {
+    font-size: 0.8rem;
+  }
+  .contact h1 {
+    line-height: 45.8px;
+  }
+  .contact .wrapper {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact .wrapper h1 {
+    text-align: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .contact button {
+    color: #FFD300;
+    display: inline-block;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .contact button i {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+  }
+  .contact .menuBar {
+    width: 100%;
+    max-width: 600px;
+    display: none;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.92);
+    position: absolute;
+  }
+  .contact .menuBar nav {
+    width: 100%;
+  }
+  .contact .menuBar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 130px;
+  }
+  .contact .menuBar ul li {
+    padding-bottom: 3%;
+  }
+  .contact .menuBar ul a {
+    font-size: 1.5rem;
+  }
+  .contactPage .contactForm {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .contactPage .contactForm input[type=text] {
+    padding: 0 0 5px 5px;
+  }
+  .contactPage form {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 450px) {
+  header.homepage .headerImg img {
+    max-width: 300px;
+    margin-top: 11vh;
   }
 }
 footer p {

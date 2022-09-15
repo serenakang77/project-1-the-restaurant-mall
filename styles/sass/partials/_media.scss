@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "function" as *;
 
+
 @media(max-width: 1270px){
     header{
     &.homepage{
@@ -9,7 +10,7 @@
     }
     .homepage{
         h1{
-            font-size: clamp(2.5rem, 5.5vw, 3.45rem);
+            font-size: clamp(2.3rem, 5.5vw, 3.45rem);
         }
         .headerImg img{
             max-width: 550px;
@@ -28,49 +29,109 @@
         }
         .contentSize{
             h2{
-                font-size: clamp(1rem, 3vw, 2rem)
+                font-size: clamp(1rem, 6vw, 2rem);
             }
         }
         
     }
-     
-        
-    
 } 
 
-@media(max-width: 900px){
-    .homepage{
+@media(max-width: 1150px){
+    .blog{
         height: 500px;
-        .wrapper nav{
-            position: relative;
-        }
-        button{
-            display: flex;
-            justify-content: flex-end;
-            background-color:transparent;
-            border: none;
-            i{
-                position: absolute;
-                right: 5%;
-                top: 7%;
+    }
+    .blogMain{
+        flex-direction: column-reverse;
+        .section1{
+            width: 100%;
+            padding: 0;
+            background-color: #171B0E;
+            .leftBar{
+                margin: 0 auto;
+                max-width: none;
+                padding: 0 5%;
+                display: flex;
+                img{
+                    width: 100%;
+                }
+                .leftBarContent{
+                    width: 55%;
+                    padding-left: 5%;
+                    @include flexjustifyAlign(center);
+                    flex-direction: column;
+                    .recentPost{
+                        margin: 0;
+                    }
+                }
+            }
+            .leftBarImg{
+                width: 45%;
+                margin: 30px 0;
+                display: flex;
+                align-items: center;
+                img{
+                    height: 100%;
+                    margin: 0;
+                }
             }
         }
-        ul{
-            display: none;
+        .section2{
+            width: 90%;
+            margin: 0 auto;
+            .section2part1{
+                padding: 0;
+                text-align: center;
+                .section2Content1{
+                    padding: 5%;
+                }
+                img{
+                    margin-top: 70px;
+                }
+            }
+            .section2part2{
+                padding: 5% 3%;
+                h5{
+                    font-weight: 600;
+                }
+            }
         }
-        .headerImg img{
-            margin-top: 2vh;
-            max-width: 450px;
+        
+    }
+}
+
+@media(max-width: 900px){
+    header{
+        &.homepage{
+            @include menuBar();
+            button{
+                @include buttonStyle();
+            }
+            background-position-x: center;
+            height: 500px;
+            .wrapper nav{
+                position: relative;
+            }
+            .headerImg img{
+                margin-top: 2vh;
+                max-width: 450px;
+            }
+            .menuBarButton{
+                cursor: pointer;
+            }
+            .navBar ul{
+                display: none;
+            }
         }
     }
     .homeMain{
         h2{
-            font-size: clamp(1.5rem, 7vw, 2.25rem);
+            font-size: clamp(1rem, 5.2vw, 2.25rem);
         }
         p{
-            font-size: 1rem;
+            font-size: clamp(0.8rem, 3.5vw, 1rem);
         }
         .section1{
+            padding: 15vh 0 80px 0;
             ul{
                 flex-direction: column;
                 align-items: center;
@@ -91,19 +152,254 @@
             }
         }
         .section2{
+            a{
+                display: block;
+            }
             .whole2Section{
                 flex-direction: column;
             }
-            .contentSize{
-                padding: 0;
+            .section2ContentRight{
+                .contentSize{
+                    padding: 50px 0 30px 0;
+                    text-align: center;
+                }
+            }
+            .burger img{
+                margin-top: 50px;
             }
             .section2Img, .section2Content{
                 width: 90%;
                 margin: 0 auto;
             }
+            .section2ContentRight{
+                order: 2;
+            }
+            .borderLeft{
+                order: 1;
+            }
+            .contentSize{
+                padding: 50px 0 0 0;
+                text-align: center;
+                h2{
+                    padding-bottom: 10px;
+                }
+            }
         }
         .section3{
             padding: 5%;
+            .section3Content{
+                padding: 20px 0 30px 0;
+                p{
+                    text-align: center;
+                }
+                a{
+                    display: block;
+                }
+            }
         }
+        .section4{
+            background-size: auto;
+            height: 500px;
+        }
+        .section5{
+            .wrapper{
+                flex-direction: column;
+            }
+            a{
+                display: block;
+            }
+            .section5ImgContainer, .section5Content{
+                width: 90%;
+                padding: 0;
+                text-align: center;
+            }
+            .section5ImgContainer{
+                display: flex;
+                flex-direction: column;
+                img{
+                    border: 15px solid $yellow;
+                    box-shadow: none;
+                    height: 80%;
+                }
+            }
+        }
+        .section6{
+            .galleryImage{
+                img{
+                    width: calc(50% - 10px);
+                    &:nth-child(3){
+                        display: none;
+                    }
+                }
+                
+            }
+        }
+    }
+    header.contact{
+        height: 400px;
+    }
+    .contactPage{
+        padding-bottom: 0;
+        .wrapper{
+            width: 100%;
+        }
+        .flex{
+            flex-direction: column-reverse;
+        }
+        .contactForm{
+            width: 90%;
+            margin: 10% auto 0 auto;
+        }
+        .contactInfo{
+            background-color: $secondaryColor;
+            width: 100%;
+            margin-top:10%;
+            padding: 7% 0;
+            align-items: center;
+            border: 3px solid $yellow;
+            .iconBox{
+                justify-content: space-between;
+                width: 35%;
+                a{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 600px){
+    header.homepage{
+        h1{
+            font-size: clamp(1.6rem, 8.5vw, 3rem);
+        }
+        .headerImg img{
+            max-width: 400px;
+            margin-top: 2vh;
+        }
+    }
+        
+    .homeMain{
+        h2{
+            line-height: 78px;
+        }
+        .section1 ul li{
+            margin-top: 5%;
+            .icon{
+                i{
+                    width: 60px;
+                    height: 60px;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .blog{
+        @include menuBar();
+        .wrapper{
+            .navBar ul{
+                display: none;
+            }
+            height: 100%;
+            display: flex;
+            h1{
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                font-size: clamp(2.25rem, 15vw, 5rem);
+            }
+        }
+        button{
+            @include buttonStyle();
+        }
+    }
+    .blogMain{
+        h2{
+            line-height: 50px;
+            padding: 30px 0;
+        }
+        .section2part2{
+            text-align: center;
+            .part2FirstContainer, .part2SecondContainer{
+                flex-direction: column;
+                h5{
+                    padding: 20px 0;
+                }
+            }
+        }
+        .section1{
+            .leftBarImg{
+                width: 100%;
+            }
+            .leftBar{
+                flex-direction: column;
+                .leftBarContent{
+                    width: 100%;
+                    text-align: center;
+                    padding: 0;
+                    .recentPost{
+                        padding: 30px 0 15px 0;
+                    }
+                    h4{
+                        font-size: clamp(1.1rem, 1.7vw, 1.25rem);
+                        line-height: 35px;
+                        padding-bottom: 25px;
+                    }
+                    ul{
+                        padding-left: 0;
+                        @include flexjustifyAlign(center, center);
+                        flex-direction: column;
+                    }
+                    li{
+                        width: fit-content;
+                    }
+                }
+            }
+        }
+        .section2{
+            .section2ContactForm{
+                form{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    .contact{
+        h1{
+            line-height: 45.8px;
+        }
+        .wrapper{
+            height: 100%;
+            display: flex;
+            h1{
+                text-align: center;
+                align-self: center;
+            }
+        }
+        button{
+            @include buttonStyle();
+            cursor: pointer;
+        }
+        @include menuBar();
+    }
+    .contactPage{
+        .contactForm{
+            box-shadow: none;
+            input[type="text"]{
+                padding: 0 0 5px 5px;
+            }
+        }
+        form{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media(max-width: 450px){
+    header.homepage .headerImg img{
+        max-width: 300px;
+        margin-top: 11vh;
     }
 }

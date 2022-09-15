@@ -16,8 +16,10 @@
 <body>
     <!-- Header starts -->
     <header class="homepage">
-        <!-- Wrapper starts -->
-        <div class="wrapper">
+        <div class="menuBar">
+            <div class="buttonContainer">
+                <button class="closeButton"><i class="fa-solid fa-x fa-2x"></i></button>
+            </div>
             <nav>
                 <ul>
                     <li><a href="./index.html">Home</a></li>
@@ -26,12 +28,23 @@
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <button><i class="fa-solid fa-bars fa-2x"></i></button>
-            <h1>The <span class="highlight">Restaurant</span> Mall</h1>
+        </div>
+        <!-- Wrapper starts -->
+        <div class="wrapper">
+            <nav class="navBar">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menuBarButton"><i class="fa-solid fa-bars fa-2x"></i></button>
+            <h1 class="removeSpace">The <span class="highlight">Restaurant</span> Mall</h1>
         </div> <!-- Wrapper ends -->
-            <div class="headerImg">
-                <img src="./the-restaurant-mall-assets/the-restaurant-mall-assets/home-box-header.jpg" alt="Fried squid ring with vegetables is on the table in the restaurant">
-            </div>
+        <div class="headerImg">
+            <img src="./the-restaurant-mall-assets/the-restaurant-mall-assets/home-box-header.jpg" alt="Fried squid ring with vegetables is on the table in the restaurant">
+        </div>
     </header> <!-- Header ends -->
     <!-- Main starts -->
     <main class="homeMain">
@@ -147,5 +160,7 @@
     <footer>
         <p>Copyright © 2019 Juno College</p>
     </footer> <!-- Footer ends -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>

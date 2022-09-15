@@ -154,14 +154,14 @@ main{
 }
 
 .blogMain .section1{
-    width: 33%;
+    width: 30%;
     .leftBar{
         background-color: $secondaryColor;
         margin-top: 100px;
-        margin-left: 50px;
+        margin-left: 10%;
         padding: 0 2%;
         height: fit-content;
-        max-width: 450px;
+        max-width: 500px;
         h4{
             color: $yellow;
             padding-top: 20px;
@@ -181,9 +181,9 @@ main{
         }
     }
     .leftBarImg{
-        margin-left: -5vw;
+        margin-left: -4vw;
         img{
-            width: 100%;
+            width: 95%;
             max-width: 600px;
             margin-top: -20px;
         }
@@ -191,7 +191,7 @@ main{
 }
 
 .blogMain .section2{
-    width: 67%;
+    width: 70%;
     .section2part1{
         padding-left: 10%;
         img{
@@ -209,6 +209,9 @@ main{
             border-bottom: 5px solid $yellow;
             p{
                 margin-bottom: 30px;
+            }
+            h5{
+                padding-bottom: 30px;
             }
         }
     }
@@ -230,7 +233,7 @@ main{
 // Blog Main ends
 
 // Blog Main & Contact Main Form combined starts
-.section1ContactForm, .contactPage .contactForm{
+.section2ContactForm, .contactPage .contactForm{
     form{
         @include flexjustifyAlign(space-between);
         flex-wrap: wrap;
@@ -247,11 +250,11 @@ main{
         background-color: $primaryColor;
         border: none;
         border-bottom: 2px solid $yellow;
-        width: 45%;
+        width: 48%;
         padding: 0 0 15px 15px;
     }
     #fullName{
-        margin-right: 10%;
+        margin-right: 4%;
     }
     textarea{
         margin-top: 20px;
@@ -311,3 +314,11 @@ main{
         }
     }
 }
+
+// 
+header{
+    .menuBar{
+        display: none;
+    }
+}
+
