@@ -296,6 +296,9 @@
     }
     .blog{
         @include menuBar();
+        .menuBarButton{
+            cursor: pointer;
+        }
         .wrapper{
             .navBar ul{
                 display: none;
@@ -377,6 +380,9 @@
                 text-align: center;
                 align-self: center;
             }
+        }
+        .navBar{
+            display: none;
         }
         button{
             @include buttonStyle();

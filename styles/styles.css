@@ -381,6 +381,10 @@ header {
 header button {
   display: none;
 }
+header .menuBar {
+  visibility: hidden;
+  height: 0;
+}
 header ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -821,10 +825,6 @@ main {
   background-color: #171B0E;
 }
 
-header .menuBar {
-  display: none;
-}
-
 @media (max-width: 1270px) {
   header.homepage {
     background-position-x: 22%;
@@ -938,10 +938,13 @@ header .menuBar {
   header.homepage .menuBar {
     width: 100%;
     max-width: 600px;
-    display: none;
+    visibility: hidden;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.92);
     position: absolute;
+    opacity: 0;
+    -webkit-transition: visibility 0.5s, opacity 0.5s linear;
+    transition: visibility 0.5s, opacity 0.5s linear;
   }
   header.homepage .menuBar nav {
     width: 100%;
@@ -1173,10 +1176,13 @@ header .menuBar {
   .blog .menuBar {
     width: 100%;
     max-width: 600px;
-    display: none;
+    visibility: hidden;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.92);
     position: absolute;
+    opacity: 0;
+    -webkit-transition: visibility 0.5s, opacity 0.5s linear;
+    transition: visibility 0.5s, opacity 0.5s linear;
   }
   .blog .menuBar nav {
     width: 100%;
@@ -1196,6 +1202,9 @@ header .menuBar {
   }
   .blog .menuBar ul a {
     font-size: 1.5rem;
+  }
+  .blog .menuBarButton {
+    cursor: pointer;
   }
   .blog .wrapper {
     height: 100%;
@@ -1308,6 +1317,9 @@ header .menuBar {
     -ms-flex-item-align: center;
         align-self: center;
   }
+  .contact .navBar {
+    display: none;
+  }
   .contact button {
     color: #FFD300;
     display: inline-block;
@@ -1326,10 +1338,13 @@ header .menuBar {
   .contact .menuBar {
     width: 100%;
     max-width: 600px;
-    display: none;
+    visibility: hidden;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.92);
     position: absolute;
+    opacity: 0;
+    -webkit-transition: visibility 0.5s, opacity 0.5s linear;
+    transition: visibility 0.5s, opacity 0.5s linear;
   }
   .contact .menuBar nav {
     width: 100%;

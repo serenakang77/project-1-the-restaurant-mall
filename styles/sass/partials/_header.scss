@@ -6,6 +6,10 @@ header{
     button{
         display: none;
     }
+    .menuBar{
+        visibility: hidden;
+        height: 0;
+    }
     ul{
         display: flex;
         padding-top: 50px;
