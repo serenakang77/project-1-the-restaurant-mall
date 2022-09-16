@@ -45,7 +45,7 @@ main{
     }
     .section2Content{
         width: 55%;
-        @include flexjustifyAlign("", flex-end);
+        @include flexjustifyAlign("", center);
     }
     .borderLeft{
         img{
@@ -74,7 +74,7 @@ main{
     }
     a{
         display: inline-block;
-        margin: 40px 0 35px 0;
+        margin: 25px 0 30px 0;
     }
     .section2ContentRight{
         text-align: end;
@@ -84,15 +84,8 @@ main{
     }
 }
 
-.section2part1, .section2part2{
-    width: auto;
-}
-
-.section3{
-    padding: 5% 10%;
-}
-
 .homeMain .section3{
+    padding: 5% 10%;
     background-color: $primaryColor;
     .section3Content{
         padding: 50px 0 30px 0;
@@ -191,6 +184,9 @@ main{
 }
 
 .blogMain .section2{
+    .section2part1, .section2part2{
+        width: auto;
+    }
     width: 70%;
     .section2part1{
         padding-left: 10%;
@@ -247,8 +243,6 @@ main{
         outline: none;
     }
     input[type=text]{
-        background-color: $primaryColor;
-        border: none;
         border-bottom: 2px solid $yellow;
         width: 48%;
         padding: 0 0 15px 15px;
@@ -314,14 +308,5 @@ main{
         }
     }
 }
-
-// 
-header{
-    // .menuBar{
-    //     display: none;
-    // }
-    // .menuBarButton{
-    //     display: none;
-    // }
-}
+// Contact Main ends
 

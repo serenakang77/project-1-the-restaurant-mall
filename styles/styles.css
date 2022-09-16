@@ -336,6 +336,11 @@ a {
   color: #FFFFFF;
 }
 
+form input[type=submit], .buttonFirst, .buttonSecond {
+  font-size: clamp(0.9rem, 4vw, 1.12rem);
+  line-height: 41.6px;
+}
+
 .wrapper {
   max-width: 1280px;
   width: 90%;
@@ -354,18 +359,18 @@ a {
   display: flex;
 }
 
+a.buttonFirst, a.buttonSecond {
+  padding: 9px 10px 5px 10px;
+}
 a.buttonFirst {
   background-color: #FFD300;
-  padding: 12px 10px 10px 10px;
   color: #0F0F0F;
 }
 a.buttonFirst:hover {
   color: #FFFFFF;
-  background-color: #FFD300;
 }
 a.buttonSecond {
   background-color: #0F0F0F;
-  padding: 15px 10px 10px 10px;
   display: inline-block;
 }
 a.buttonSecond:hover {
@@ -513,9 +518,9 @@ main {
   -webkit-box-pack: "";
       -ms-flex-pack: "";
           justify-content: "";
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .homeMain .section2 .borderLeft img {
   -webkit-box-shadow: -15px 15px #FFD300;
@@ -544,7 +549,7 @@ main {
 }
 .homeMain .section2 a {
   display: inline-block;
-  margin: 40px 0 35px 0;
+  margin: 25px 0 30px 0;
 }
 .homeMain .section2 .section2ContentRight {
   text-align: end;
@@ -553,15 +558,8 @@ main {
   padding: 30px 20% 0 10%;
 }
 
-.section2part1, .section2part2 {
-  width: auto;
-}
-
-.section3 {
-  padding: 5% 10%;
-}
-
 .homeMain .section3 {
+  padding: 5% 10%;
   background-color: #2B331B;
 }
 .homeMain .section3 .section3Content {
@@ -682,6 +680,9 @@ main {
 .blogMain .section2 {
   width: 70%;
 }
+.blogMain .section2 .section2part1, .blogMain .section2 .section2part2 {
+  width: auto;
+}
 .blogMain .section2 .section2part1 {
   padding-left: 10%;
 }
@@ -744,8 +745,6 @@ main {
   outline: none;
 }
 .section2ContactForm input[type=text], .contactPage .contactForm input[type=text] {
-  background-color: #2B331B;
-  border: none;
   border-bottom: 2px solid #FFD300;
   width: 48%;
   padding: 0 0 15px 15px;
@@ -846,7 +845,7 @@ main {
     font-size: clamp(0.7rem, 2.5vw, 1rem);
   }
   .homeMain .contentSize h2 {
-    font-size: clamp(1rem, 6vw, 2rem);
+    font-size: clamp(1rem, 3.1vw, 2rem);
   }
 }
 @media (max-width: 1150px) {
@@ -901,6 +900,9 @@ main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: "";
+        -ms-flex-pack: "";
+            justify-content: "";
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -945,6 +947,9 @@ main {
     opacity: 0;
     -webkit-transition: visibility 0.5s, opacity 0.5s linear;
     transition: visibility 0.5s, opacity 0.5s linear;
+  }
+  header.homepage .menuBar .closeButton {
+    cursor: pointer;
   }
   header.homepage .menuBar nav {
     width: 100%;
@@ -993,7 +998,7 @@ main {
     display: none;
   }
   .homeMain h2 {
-    font-size: clamp(1rem, 5.2vw, 2.25rem);
+    font-size: clamp(0.8rem, 5.2vw, 2.25rem);
   }
   .homeMain p {
     font-size: clamp(0.8rem, 3.5vw, 1rem);
@@ -1029,6 +1034,7 @@ main {
   }
   .homeMain .section2 a {
     display: block;
+    margin: 35px 0 30px 0;
   }
   .homeMain .section2 .whole2Section {
     -webkit-box-orient: vertical;
@@ -1063,6 +1069,7 @@ main {
   }
   .homeMain .section2 .contentSize h2 {
     padding-bottom: 10px;
+    font-size: clamp(1rem, 4.1vw, 2rem);
   }
   .homeMain .section3 {
     padding: 5%;
@@ -1089,6 +1096,9 @@ main {
   .homeMain .section5 a {
     display: block;
   }
+  .homeMain .section5 .yellowText {
+    padding: 40px 0 5px 0;
+  }
   .homeMain .section5 .section5ImgContainer, .homeMain .section5 .section5Content {
     width: 90%;
     padding: 0;
@@ -1108,6 +1118,9 @@ main {
     -webkit-box-shadow: none;
             box-shadow: none;
     height: 80%;
+  }
+  .homeMain .section5 .section5Content a {
+    margin: 35px 0 0 0;
   }
   .homeMain .section6 .galleryImage img {
     width: calc(50% - 10px);
@@ -1184,6 +1197,9 @@ main {
     -webkit-transition: visibility 0.5s, opacity 0.5s linear;
     transition: visibility 0.5s, opacity 0.5s linear;
   }
+  .blog .menuBar .closeButton {
+    cursor: pointer;
+  }
   .blog .menuBar nav {
     width: 100%;
   }
@@ -1218,6 +1234,9 @@ main {
   .blog .wrapper h1 {
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1346,6 +1365,9 @@ main {
     -webkit-transition: visibility 0.5s, opacity 0.5s linear;
     transition: visibility 0.5s, opacity 0.5s linear;
   }
+  .contact .menuBar .closeButton {
+    cursor: pointer;
+  }
   .contact .menuBar nav {
     width: 100%;
   }
@@ -1380,6 +1402,19 @@ main {
   header.homepage .headerImg img {
     max-width: 300px;
     margin-top: 11vh;
+  }
+  .homeMain .section2 .contentSize {
+    padding-top: 30px;
+  }
+  .homeMain .section2 .section2ContentRight .contentSize {
+    padding: 30px 0 20px 0;
+  }
+  .homeMain .section2 .contentSize h2 {
+    font-size: clamp(1rem, 5.1vw, 2rem);
+    padding-bottom: 0;
+  }
+  .homeMain .section5 .yellowText {
+    padding: 25px 0 0 0;
   }
 }
 footer p {

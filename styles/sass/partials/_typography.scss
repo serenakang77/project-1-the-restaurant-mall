@@ -1,7 +1,6 @@
 @use "variables" as *;
 
 html{
-    // font size 20px basic
     font-size: 125%;
     font-family: $font;
 }
@@ -104,4 +103,9 @@ a{
     cursor: pointer;
     transition: 0.3s;
     color: $white;
+}
+
+form input[type="submit"], .buttonFirst, .buttonSecond {
+    font-size: clamp(0.9rem, 4vw, 1.12rem);
+    line-height: 41.6px;
 }

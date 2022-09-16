@@ -16,18 +16,18 @@ max-width: 1280px;
 }
 
 a{
+    &.buttonFirst, &.buttonSecond{
+        padding: 9px 10px 5px 10px;
+    }
     &.buttonFirst{
         background-color: $yellow;
-        padding: 12px 10px 10px 10px;
         color: $black;
         &:hover{
             color: $white;
-            background-color: $yellow;
         }
     }
     &.buttonSecond{
         background-color: $black;
-        padding: 15px 10px 10px 10px;
         display: inline-block;
         &:hover{
             background-color: $yellow;
