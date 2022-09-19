@@ -8,7 +8,7 @@ main{
 
 // Home Main starts
 .homeMain .section1{
-    padding: 20vh 0 100px 0;
+    padding: 200px 0 100px 0;
     ul{
         @include flexjustifyAlign(space-between);
         flex-wrap: wrap;
