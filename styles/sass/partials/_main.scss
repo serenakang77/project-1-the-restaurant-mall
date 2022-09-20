@@ -274,7 +274,10 @@ main{
 }
 // Blog Main & Contact Main Form combined ends
 
-// Contact Main starts
+// Contact page starts
+.contact h1{
+    margin-top: 3rem;
+}
 .contactPage{
     padding-bottom: 90px;
     .contactInfo{
@@ -308,5 +311,5 @@ main{
         }
     }
 }
-// Contact Main ends
+// Contact page ends
 
