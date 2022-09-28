@@ -13,6 +13,8 @@
 <body>
     <!-- Header starts -->
     <header class="contact">
+        <button class="backward"><i class="fa-solid fa-chevron-left fa-3x"></i></button>
+        <button class="forward"><i class="fa-solid fa-chevron-right fa-3x"></i></button>
         <div class="menuBar">
             <div class="buttonContainer">
                 <button class="closeButton"><i class="fa-solid fa-x fa-2x"></i></button>
@@ -30,10 +32,10 @@
         <div class="wrapper">
             <nav class="navBar">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
+                    <li><a class="nextPage" href="./index.html">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a class="nextPage" href="./blog.html">Blog</a></li>
+                    <li><a class="nextPage" href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
             <button class="menuBarButton"><i class="fa-solid fa-bars fa-2x"></i></button>
@@ -64,7 +66,7 @@
                     <label for="email"></label>
                     <input type="text" id="email" name="email" placeholder="Email address" required>
                     <label for="message"></label>
-                    <textarea id="message" name="message" placeholder="Message"></textarea>
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
                     <input type="submit" value="Submit" required>
                 </form>
             </div>
@@ -76,5 +78,6 @@
     </footer> <!-- Footer ends -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="script.js"></script>
+	<script src="contact-form.js"></script>
 </body>
 </html>

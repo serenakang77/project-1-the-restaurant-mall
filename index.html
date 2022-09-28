@@ -14,8 +14,11 @@
 </head> <!-- Head ends -->
 <!-- Body starts -->
 <body>
+    
     <!-- Header starts -->
     <header class="homepage">
+        <button class="backward"><i class="fa-solid fa-chevron-left fa-3x"></i></button>
+        <button class="forward"><i class="fa-solid fa-chevron-right fa-3x"></i></button>
         <div class="menuBar">
             <div class="buttonContainer">
                 <button class="closeButton"><i class="fa-solid fa-x fa-2x"></i></button>
@@ -33,10 +36,10 @@
         <div class="wrapper">
             <nav class="navBar">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
+                    <li><a class="nextPage" href="./index.html">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a class="nextPage" href="./blog.html">Blog</a></li>
+                    <li><a class="nextPage" href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
             <button class="menuBarButton"><i class="fa-solid fa-bars fa-2x"></i></button>
@@ -48,7 +51,7 @@
     </header> <!-- Header ends -->
     <!-- Main starts -->
     <main class="homeMain">
-        <!-- section1 starts -->
+        
         <section class="section1">
             <!-- Wrapper starts -->
             <ul class="wrapper">
@@ -89,8 +92,8 @@
                     </div>
                 </li>
             </ul> <!-- Wrapper ends -->
-        </section> <!-- Section1 ends -->
-        <!-- Section2 starts -->
+        </section>
+
         <section class="section2">
             <div class="whole2Section">
                 <div class="section2Img">
@@ -120,20 +123,20 @@
                     </figure>
                 </div>
             </div>
-        </section> <!-- section2 ends -->
-        <!-- section3 starts -->
+        </section> 
+
         <section class="section3">
             <div class="section3Content wrapper">
                 <h2 class="yellowText">Win a $100 Gift Cart</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore molestiae commodi voluptates consectetur velit. Eligendi, voluptates velit sapiente laborum modi magni iusto ullam esse provident, totam animi cupiditate distinctio voluptate facilis iste beatae! Libero id repudiandae nesciunt voluptatum, velit et officiis eos optio nisi sequi ratione?</p>
                 <a href="#" class="buttonSecond">Find out More</a>
             </div>
-        </section> <!-- section3 ends -->
-        <!-- section4 starts -->
+        </section> 
+       
         <section class="section4">
             <!-- background images -->
-        </section> <!-- section4 ends -->
-        <!-- section5 starts -->
+        </section> 
+        
         <section class="section5">
             <!-- Wrapper starts -->
             <div class="wrapper">
@@ -146,15 +149,18 @@
                     <a href="#" class="buttonSecond">Find out More</a>
                 </div>
             </div> <!-- Wrapper ends -->
-        </section> <!-- Section5 ends -->
-        <!-- Section6 starts -->
+        </section>
+        
         <section class="section6">
             <div class="galleryImage wrapper">
-                <img src="./the-restaurant-mall-assets/the-restaurant-mall-assets/gallery-image-1.jpg" alt="Lights with plant">
-                <img src="./the-restaurant-mall-assets/the-restaurant-mall-assets/gallery-image-2.jpg" alt="Leon sign written Take Away">
-                <img src="./the-restaurant-mall-assets/the-restaurant-mall-assets/gallery-image-3.jpg" alt="Korean food bibimbap with many side dishs">
+                <button class="imageBackward"><i class="fa-solid fa-chevron-left fa-4x"></i></button>
+                <img class="allImage" src="./the-restaurant-mall-assets/the-restaurant-mall-assets/gallery-image-1.jpg" alt="Lights with plant">
+                <img class="allImage hidden" src="./the-restaurant-mall-assets/the-restaurant-mall-assets/gallery-image-2.jpg" alt="Leon sign written Take Away">
+                <img class="allImage hidden" src="./the-restaurant-mall-assets/the-restaurant-mall-assets/gallery-image-3.jpg" alt="Korean food bibimbap with many side dishs">
+                <button class="imageForward"><i class="fa-solid fa-chevron-right fa-4x"></i></button>
             </div>
-        </section> <!-- Section6 ends -->
+        </section> 
+
     </main> <!-- Main ends -->
     <!-- Footer starts -->
     <footer>
@@ -162,5 +168,6 @@
     </footer> <!-- Footer ends -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="script.js"></script>
+    <script src="./image.js"></script>
 </body>
 </html>

@@ -240,6 +240,8 @@ body {
 .homepage h1 {
   font-size: 3.45rem;
   font-weight: 600;
+  padding: 0.67rem 0;
+  margin: 0;
 }
 
 h2, .blog h1 {
@@ -382,12 +384,34 @@ header {
   background-position: center;
   height: 650px;
 }
-header button {
+header .closeButton, header .menuBarButton {
   display: none;
 }
 header .menuBar {
   visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.5s, opacity 0.5s linear;
+  transition: visibility 0.5s, opacity 0.5s linear;
   height: 0;
+}
+header .forward, header .backward {
+  background-color: transparent;
+  border: none;
+  color: #FFD300;
+  position: fixed;
+}
+header .forward i, header .backward i {
+  cursor: pointer;
+}
+header .backward {
+  left: 0;
+  padding-left: 30px;
+  bottom: 50%;
+}
+header .forward {
+  right: 0;
+  padding-right: 30px;
+  bottom: 50%;
 }
 header ul {
   display: -webkit-box;
@@ -448,6 +472,20 @@ header.contact {
 
 main {
   background-color: #2B331B;
+}
+
+body {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+.loaded {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
 }
 
 .homeMain .section1 {
@@ -614,23 +652,88 @@ main {
   margin: 20px 0;
 }
 
+.animation {
+  -webkit-animation-name: moveForward;
+          animation-name: moveForward;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.animationBack {
+  -webkit-animation-name: moveBackward;
+          animation-name: moveBackward;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.allimages {
+  overflow: hidden;
+}
+
+@-webkit-keyframes moveForward {
+  100% {
+    -webkit-transform: translate(666px);
+            transform: translate(666px);
+  }
+}
+
+@keyframes moveForward {
+  100% {
+    -webkit-transform: translate(666px);
+            transform: translate(666px);
+  }
+}
+@-webkit-keyframes moveBackward {
+  100% {
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
+  }
+}
+@keyframes moveBackward {
+  100% {
+    -webkit-transform: translate(50%);
+            transform: translate(50%);
+  }
+}
 .homeMain .section6 {
   background-color: #171B0E;
-}
-.homeMain .section6 .galleryImage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.homeMain .section6 .galleryImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
   padding: 7% 0;
 }
 .homeMain .section6 .galleryImage img {
-  width: calc(33% - 10px);
+  max-width: 100%;
+  width: 52%;
+}
+.homeMain .section6 .imageBackward, .homeMain .section6 .imageForward {
+  background-color: #171B0E;
+  border: none;
+  color: #FFD300;
+}
+.homeMain .section6 .imageBackward i, .homeMain .section6 .imageForward i {
+  cursor: pointer;
 }
 
 .blogMain {
@@ -987,6 +1090,19 @@ main {
     right: 5%;
     top: 5%;
   }
+  header.homepage .backward i {
+    left: 0;
+    padding-left: 2%;
+    bottom: 50%;
+    right: 0;
+    top: 0;
+  }
+  header.homepage .forward i {
+    right: 0;
+    padding-right: 2%;
+    bottom: 50%;
+    top: 0;
+  }
   header.homepage .wrapper nav {
     position: relative;
   }
@@ -1130,12 +1246,6 @@ main {
   }
   .homeMain .section5 .section5Content a {
     margin: 35px 0 0 0;
-  }
-  .homeMain .section6 .galleryImage img {
-    width: calc(50% - 10px);
-  }
-  .homeMain .section6 .galleryImage img:nth-child(3) {
-    display: none;
   }
   header.contact {
     height: 450px;

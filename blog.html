@@ -13,6 +13,8 @@
 <body>
     <!-- Header starts -->
     <header class="blog">
+        <button class="backward"><i class="fa-solid fa-chevron-left fa-3x"></i></button>
+        <button class="forward"><i class="fa-solid fa-chevron-right fa-3x"></i></button>
         <div class="menuBar">
             <div class="buttonContainer">
                 <button class="closeButton"><i class="fa-solid fa-x fa-2x"></i></button>
@@ -30,10 +32,10 @@
         <div class="wrapper">
             <nav class="navBar">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
+                    <li><a class="nextPage" href="./index.html">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a class="nextPage" href="./blog.html">Blog</a></li>
+                    <li><a class="nextPage" href="./contact.html">Contact</a></li>
                 </ul>
             </nav>
             <button class="menuBarButton"><i class="fa-solid fa-bars fa-2x"></i></button>
@@ -42,7 +44,7 @@
     </header> <!-- Header ends -->
     <!-- Main starts -->
     <main class="blogMain">
-        <!-- section1 starts -->
+        
         <section class="section1">
             <div class="leftBar">
                 <div class="leftBarImg">
@@ -68,8 +70,8 @@
                     </ul>
                 </div>
             </div>
-        </section> <!-- Section1 ends -->
-        <!-- Section2 starts -->
+        </section> 
+        
         <section class="section2">
             <!-- Section2part1 & Wrapper2 starts -->
             <div class="section2part1 wrapper2">
@@ -91,7 +93,7 @@
                         <img src="./the-restaurant-mall-assets/the-restaurant-mall-assets/comment-1.jpg" alt="One girl is smiling at the camera">
                     </figure>
                     <div class="part2FirstContent">
-                        <h5>Tuesday October 9th, 2019 by Ali</h5>
+                        <h5>Tuesday October 9, 2019 by Ali</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae accusantium asperiores, voluptas velit dicta ex alias error quas veritatis ad?</p>
                     </div>
                 </div>
@@ -100,23 +102,24 @@
                         <img src="./the-restaurant-mall-assets/the-restaurant-mall-assets/comment-2.jpg" alt="One girl is looking at left side of camera">
                     </figure>
                     <div class="part2SecondContent">
-                        <h5>Wednesday October 10th, 2019 by Lisa</h5>
+                        <h5>Wednesday October 10, 2019 by Lisa</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni amet officia tempora consequatur.</p>
                     </div>
                 </div>
                 <div class="section2ContactForm">
-                    <form>
+                    <form class="commentForm">
                         <label for="fullName"></label>
                         <input type="text" id="fullName" name="fullName" placeholder="Name" required>
                         <label for="email"></label>
                         <input type="text" id="email" name="email" placeholder="Email address" required>
                         <label for="comment"></label>
-                        <textarea id="comment" name="comment" placeholder="Comment"></textarea>
+                        <textarea id="comment" name="comment" placeholder="Comment" required></textarea>
                         <input type="submit" value="Post Comment" required>
                     </form>
                 </div>
             </div> <!-- Section2part2 & Wrapper2 ends -->
-        </section> <!-- section2 ends -->
+        </section> 
+
     </main> <!-- Main ends -->
     <!-- Footer starts -->
     <footer>
@@ -124,5 +127,6 @@
     </footer> <!-- Footer ends -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="script.js"></script>
+    <script src="./append.js"></script>
 </body>
 </html>

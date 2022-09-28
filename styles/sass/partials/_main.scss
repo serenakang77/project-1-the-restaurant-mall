@@ -6,6 +6,17 @@ main{
     background-color: $primaryColor;
 }
 
+body{
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.loaded{
+    opacity: 1;
+}
+.hidden{
+    display: none;
+}
 // Home Main starts
 .homeMain .section1{
     padding: 200px 0 100px 0;
@@ -128,16 +139,50 @@ main{
         }
     }
 }
+.animation{
+    animation-name: moveForward;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.animationBack{
+    animation-name: moveBackward;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.allimages{
+    overflow: hidden;
+}
 
+@keyframes moveForward{
+    100%{
+        transform: translate(666px);
+    }
+}
+@keyframes moveBackward{
+    100%{
+        transform: translate(50%);
+    }
+}
 .homeMain .section6{
     background-color: $secondaryColor;
+    @include flexjustifyAlign(space-between, center);
     .galleryImage{
-        @include flexjustifyAlign(space-between);
+        @include flexjustifyAlign(space-evenly);
         padding: 7% 0;
         img{
-            width: calc(33% - 10px);
+            max-width: 100%;
+            width: 52%;
         }
     }
+    .imageBackward, .imageForward{
+        background-color: $secondaryColor;
+        border: none;
+        color: $yellow;
+        i{
+            cursor: pointer;
+        }
+    }
+
 }
 // Home Main ends
 

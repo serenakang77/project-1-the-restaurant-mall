@@ -108,6 +108,19 @@
             button{
                 @include buttonStyle();
             }
+            .backward i{
+                left: 0;
+                padding-left: 2%;
+                bottom: 50%;
+                right: 0;
+                top: 0;
+            }
+            .forward i{
+                right: 0;
+                padding-right: 2%;
+                bottom: 50%;
+                top: 0;
+            }
             background-position-x: center;
             height: 500px;
             .wrapper nav{
@@ -237,17 +250,6 @@
             }
             .section5Content a{
                 margin: 35px 0 0 0;
-            }
-        }
-        .section6{
-            .galleryImage{
-                img{
-                    width: calc(50% - 10px);
-                    &:nth-child(3){
-                        display: none;
-                    }
-                }
-                
             }
         }
     }
