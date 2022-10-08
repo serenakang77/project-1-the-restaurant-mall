@@ -56,7 +56,7 @@ body{
     }
     .section2Content{
         width: 55%;
-        @include flexjustifyAlign("", center);
+        @include flexjustifyAlign("initial", center);
     }
     .borderLeft{
         img{
@@ -117,7 +117,7 @@ body{
 
 .homeMain .section5{
     .wrapper{
-        @include flexjustifyAlign("", center);
+        @include flexjustifyAlign("initial", center);
         padding: 8% 0;
     }
     background-color: $primaryColor;

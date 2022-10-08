@@ -6,7 +6,7 @@
     height: $sizeValue;
 }
 
-@mixin flexjustifyAlign($type: normal, $value: normal){
+@mixin flexjustifyAlign($type: initial, $value: initial){
     display: flex;
     justify-content: $type;
     align-items: $value;
